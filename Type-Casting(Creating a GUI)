@@ -1,1 +1,37 @@
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) 
+	{
+		
+/* we will now work with JOptionPane class to create basic GUI.We will type in some uder information into some dialogue box.
+and store it in a string.*/
+/* in order to create an input dialogue box,we will type the name of the class JOptionPane and will pick showinputDialog and type in 
+ our question.*/
+        String name = JOptionPane.showInputDialog("Enter your name");
+        
+/* lets create another dialog box that displays our name.*/
+        JOptionPane.showMessageDialog(null, "Hello "+name);
+        
+        /* we will similarly do this for age as well.Take input from a dialog box and display.
+ Note that the showInputDialog box will always return a string.So sometimes you need to 
+ typecaste it. See below how type casting of string is done to integer.The parInt method
+ will convert a string to an integer.*/
+        
+        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age"));
+        JOptionPane.showMessageDialog(null, "You are "+age+" years old");
+        
+        
+/*lets ask the height now,We do the same typecasting as mentioned above but now we use parseDouble to typecast.*/
+        double height = Double.parseDouble(JOptionPane.showInputDialog("Enter your height"));
+        JOptionPane.showMessageDialog(null, "Your Height "+height+"cms");
+        
+        
+        
+	}
+
+}
 
