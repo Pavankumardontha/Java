@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) 
+	{
+		
+/* we need scanner class to accept user input.This class is found in java utility package. We need to import that before we use the scanner class 
+to take the user input.We will use the Scanner class to create a scanner object.
+*/
+         Scanner scanner = new Scanner(System.in);
+         System.out.println("What is your name ?");
+/* we will now take the user input and assign it to a string variable called name.*/
+         String name = scanner.nextLine(); //take the input in the present line and push the cursor to the next line.
+         
+/* lets now accept their age.*/
+         System.out.println("How Old are you ?");
+         int age = scanner.nextInt(); //the scanner will look for an integer from the user and assign it to the variable age.
+/*The scanner will take the integer input in the present line but will not PUSH the cursor to the next line and this creates a problem for further inputs.
+The problem is with the input.nextInt() method - it only reads the int value. So when you continue reading with input.nextLine() you receive the "\n" Enter key. 
+So to skip this you have to add the input.nextLine().
+if the scanner is looking for an integer and if we input a string then there would be inputmismatchexception. In future we use exception 
+handling to prevent this from happening.*/
+         scanner.nextLine();
+         System.out.println("What is your favourite food ? ");
+         String food = scanner.nextLine();
+         
+         System.out.println("Hello "+name);
+         System.out.println("You are "+age+" years old"); 
+         System.out.println("You like "+food);
+         
+	}
+
+}
