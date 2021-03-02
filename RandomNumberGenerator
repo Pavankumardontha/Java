@@ -1,0 +1,22 @@
+import java.util.Random;
+
+public class Main {
+
+	public static void main(String[] args) 
+	{
+/*we will generate random integers,doubles and boolean values. So in order to generate random numbers we have to use a random class found within a 
+ library java.util . We need an instance/object of this class.*/
+		Random random = new Random();
+		/* these are not true random numbers.*/
+/* lets generate a random integer and store it in an integer.*/
+		int x = random.nextInt();
+		System.out.println(x);
+		
+		double y = random.nextDouble();
+		System.out.println(y);
+		
+		boolean z = random.nextBoolean();
+		System.out.println(z);
+	}
+
+}
