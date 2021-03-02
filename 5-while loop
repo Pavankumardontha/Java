@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) 
+	{
+		Scanner scanner = new Scanner(System.in);
+		String name = ""; // Initializing name with empty string
+		
+		//we will run the while loop till the user enters a valid name(other than empty string).
+		while(name.isBlank())
+		{
+			System.out.println("ENter your name: ");
+			name = scanner.nextLine();
+		}
+		
+		
+	}
+
+}
