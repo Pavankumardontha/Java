@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+			
+      /*to use array list we must import the ArrayList class from the java.util.*/
+      
+		/* ArrayList = 	a resizable array.Elements can be added and removed after compilation phase.They only store reference data types.These cannot be used to store primitive 
+    data types.*/
+		
+		ArrayList<String> food = new ArrayList<String>();
+		//ArrayList<Integer> v = new ArrayList<Integer>();  //note the use of first capital letter in Integer since these are reference data types and NOT primitive data types.
+		food.add("pizza");
+		food.add("hamburger");
+		food.add("hotdog");
+		
+		//food.set(0, "sushi"); //to set food[0]="sushi"
+		//food.remove(2);    //to delete element stored at second index
+		//food.clear();      //to clear the whole ArrayList
+		//int n = food.size()  //this stores ArrayList size. Note that for arrays we use length and for ArrayList we use size() method.
+		for(int i=0; i<food.size(); i++) {
+			System.out.println(food.get(i));
+		}
+    
+    
+    
+    /* 2D-ArrayList */
+    ArrayList<ArrayList<string>> groceryList = new Arraylist();
+    
+    ArrayList<String> bakeryList = new ArrayList();
+		bakeryList.add("pasta");
+		bakeryList.add("garlic bread");
+		bakeryList.add("donuts");
+		
+		ArrayList<String> produceList = new ArrayList();
+		produceList.add("tomatoes");
+		produceList.add("zucchini");
+		produceList.add("peppers");
+		
+		ArrayList<String> drinksList = new ArrayList();
+		drinksList.add("soda");
+		drinksList.add("coffee");
+		
+		groceryList.add(bakeryList);
+		groceryList.add(produceList);
+		groceryList.add(drinksList);
+		
+		System.out.println(groceryList);  //this will print the total ArrayList
+    System.out.println(groceryList.get(0)); //this will print the bakerylist
+    System.out.println(groceryList.get(0).get(1));   //this will print the second element in the bakerylist ie garlic bread
+    //there are so many other methods in ArrayList.
+	}
+}
