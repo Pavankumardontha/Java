@@ -12,6 +12,20 @@ public class Main {
 		for(int i=0;i<cars.length;i++)
 		for(int j=0;j<cars[i].length;j++)
 	    System.out.print(cars[i][j]+" ");
+	    
+	    /* We can also do like this.
+	    
+	     String[][] cars = new String[3][3];
+	     cars[0][0] = "Camera";
+	     cars[0][1] = "Curvette";
+	     cars[0][2] = "Silvardo";
+	     cars[1][0] = "Mustang";
+	     cars[1][1] = "chevrolet";
+	     cars[1][2] = "F-ice";
+	     cars[2][0] = "Ferrari";
+	     cars[2][1] = "lambo";
+	     cars[2][2] = "Tesla";
+	   */
 	}
 
 }
