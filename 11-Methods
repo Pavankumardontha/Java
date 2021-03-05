@@ -1,0 +1,23 @@
+public class Main {
+
+ public static void main(String[] args) {
+  
+  // method = a block of code that is executed whenever it is called upon
+  
+  int x = 3;
+  int y = 4;
+  
+  int z = add(x,y);
+
+  System.out.println(z);
+ }
+ 
+ static int add(int x, int y) 
+ {
+  //note that we have added static in front of the return type and also we are declaring this function outside the main method and inside the Main class.
+  int z = x + y;
+  return z;
+  
+ }
+ 
+}
