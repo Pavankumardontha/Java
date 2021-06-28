@@ -1,0 +1,27 @@
+...................................................................................................................................................................................
+An interface specifies Methods that a particular class that implements the interface must implement.The interface itself that you are creating is abstract which means that there is
+no actual code for any of the methods,you only supply the actual method names and the parameters. The actual code still goes in the actual class that you are creating.But the idea 
+is to use an interface to provide a common behaviour that can be used by several classes by having them all implement the same interface. So its really a way to standardize the way 
+a particular set of classes are used.Lets see an example to understand this better. Lets create a class Gearbox and implement a method to check for the clutch.
+
+public class Gearbox
+{
+    private boolean clustIsIn;
+    public void operateClutch(String inOrOut)
+    {
+        this.clutchIsIn = inOrOut.equalsIgnoreCase("in");
+    }
+}
+
+Now imagine that we want to slightly change this code. We wwant to make it better. It does the same job but we will change it slightly.
+
+public class Gearbox
+{
+    private boolean clustIsIn;
+    public void operateClutch(boolean inOrOut)
+    {
+        this.clutchIsIn = inOrOut;
+    }
+}
+
+But now the signature of the public method operateClutch has been changed. 
