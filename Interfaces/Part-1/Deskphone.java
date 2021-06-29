@@ -5,6 +5,7 @@ package com.timbuchalka;
  */
 public class DeskPhone implements ITelephone {
 
+    /*Look at the implements keyword used to implement the interface.We have to overide all the methods defined in the ITelephone interface in this DeskPhone class.*/
     private int myNumber;
     private boolean isRinging;
 
