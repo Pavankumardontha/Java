@@ -1,0 +1,42 @@
+Java Memory is divided into heap and stack memory. We will first talk about heap memory. 
+
+Heap Memory :- Heap memory is again divided into 2 parts, young generation and old generation. All the class objects will be stored in the YG when created for the first time. 
+YG is divided into 3 parts:- hidden memory , survivor memory s0 , survivor memory s1 . New object always will be stored inside the hidden memory. Now when you have big application 
+running, there are so many objects that are created while the application runs. But the hidden memory space is limited. You cannot have infinite no of objects stored in the hidden 
+memory.We will see what happens if this complete hidden memory is filled with all objects. After the hidden memory is filled with objects, minor garbage collection will be 
+performed. Minor garbage collector is called and this will shift some of the objects into s0. So some objects are shifted from hidden to survivor memory s0. Once survivor memory 
+s0 is filled, then it will shift the objects into survivor memory s1.So Garbage collector is called so many times as the memory in the hidden layer gets filled. 
+
+Lets say we have created an object of a called test and after some time if the reference varible point to NULL then garbage collector is called since it will free or destroy this 
+object. 
+test t1 = new test();
+t1 = NULL; //garbage collector will be called to destroy this object 
+
+The duty of the GC is to free the memory from the young generation. This is what happens in young generation memory. 
+
+Now lets understand what happens in the old generation memory,
+Think of what happens when s0 and s1 both are completely filled ?? Java will shift some objects into old generation. Once this old generation is also filled up, then we will call 
+major Garbage collector. It takes alot of time to free up the space. So When we are dealing with lot of objects then we have to keep in mind of the young generation and old 
+generation memories. We should not create unnecessary objects. So Amazon application has a class called request. When so many users visit the site, internally it creates so many 
+objects of request class. So in that case, major GC will come into the picture. This will take longer time to process the request as compared to minor GC.Minor GC is comes when 
+we have less no. of objects and major GC will come into picture when we have more number of objects created. Major GC activities should be reduced while buidling our applications. 
+This reduces the response time to a great extent. Inside this old generation memory we have memory pool. Memory pool is used to store immutable objects of string class, string
+pools etc. This is definded at the run time.
+
+We have another type of memory in java known has permanent generation :- Entire metadata of classes/methods will be stored over here. This is not part of the heap memory. This memory is 
+generated at the run time.Inside this permanent generation we have what we known as Method area. This method area will store class structure, static variables and constants. 
+Inside this method area, we have runtime constant pool. This is used to store the static variables,constant variables etc.
+
+ To sum up,Java Heap memory stores objects, JRE classes. GC runs only on heap memory to free some memory by destroying some objects which dont have any reference.
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Now lets talk about Stack memory. 
+It is used for execution of threads. It contains method specific values. All the local variables will be stored here. Object references which are referring some objects in the 
+heap memory are stored here. So the object is stored in the heap but its reference is stored in the stack.Whenver we create any method,a method block is created inside the 
+stack memory for each method created inside the class.Once this method is completely executed its memory is freed and given to other methods.Stack memory size of very less as 
+compared to heap memory.
+
+                                                     This is the complete picture of JRE
+
+
+
