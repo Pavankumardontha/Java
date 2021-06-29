@@ -24,4 +24,8 @@ public class Gearbox
     }
 }
 
-But now the signature of the public method operateClutch has been changed.  We might have used the previous signature of the above method to build our entire applicarion
+But now the signature of the public method operateClutch has been changed.  We might have used the previous signature of the above method to build our entire applicarion. We havent 
+made any comittment that the signature would not be changed in the future.We havent said that once we create this particular public method,we arent going to change it. Interface 
+its just the committment , a contract if you will,that the methods signatures and those variables in the interface(constants if we defined any) will not change.So consequently, you 
+can create an interface and use it and you will know that provided to stick to whats there in the interface,the code isnt going to change and you are not gonna be breaking the code 
+anywhere.We will create an interface to define the behaiviour of a telephone.
