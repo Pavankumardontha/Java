@@ -1,0 +1,4 @@
+Database :- The container for all the data that you store 
+In SQLite the entire database is stored in a single file.But this is not true in most large database systems  
+DataDictionary :- Provides a comprehensive list of structure and types of data in the database. It basically discribes  all the tables and fields within the database. In SQLite 
+there is a table in each database called SQL_lite_master that has this information in it.
