@@ -1,0 +1,22 @@
+JDK(Java Development Kit) :- The JDK includes tools useful for developing and testing programs written in the java programming language and running on the java platform.Basically 
+it contains the tools that will take your java source code(java code that you have written) and convert them into a format that the JRE and JVM about which we will talk about in a
+moment, can execute. It includes things like debuggers for testing, java compiler for compiling your codes, etc.JDK includes Java Runtime Environment (JRE), which happens to be a 
+loader/interpreter, a compiler called (javac), a document generator (Javadoc), an archiver (jar), and other tools required in development.
+
+JRE(Java Runtime Environment) :- The JRE actually includes the JVM. JRE is used to run your java programs. it includes the libraries and also the java launcher(which is basically 
+the JVM). JDK contains JRE . The Java Runtime Environment contains core classes and supporting files; it also contains Java Virtual Machine (JVM). It provides the runtime 
+environment. Any person who wants to run java code has to have the java runtime edition installed on their computer to do so. The java run time edition, just to be clear, doesnt 
+included any development tools. Development tools are used to write the codes and the run time edition is used just to run the developed code to see its output. So you can't 
+develop programs with the java run time environment but you actually run the programs that are created. 
+
+Before we move on to understand about JVM,lets just understand about how the traditional programming languages work. 
+lets take the example of C++. Now a C++ compiler, which compiles your C++ code,compiles it or makes it work with the hardware that it is currently being compiled on. So if we are 
+running a C++ compiler on some windows intel machine, it will create an executable version of the code, that will execute only on an intel platform computer. We wont be able to 
+take that executable code and run it on a different architechture machine like a solaris unit machine for example. So thats how C++ compilers work. They generate executable version
+of the code which are system specific. 
+
+But Java takes a different approach. The JVM is effectively an abstract computing machine. It knows nothing about the java programming language. All it can do is to work with 
+compiled java code. So it is more of less like a physical machine but its an abstract concept.So when we actually execute a java program from the JRE, it runs this virtual machine
+and thats how java code is executed. The Java Development kit, takes the java code that you have written and creates the class files, .class files. These files are executed by the 
+java run time environment in the java virtual Machine. Now each machine has its own java virtual machine depending on its Operating system. So the java code can run on any device 
+that has a JVM installed(ofcourse JDK is coupled with JRE which is coupled with JVM. So you need all three of them).
