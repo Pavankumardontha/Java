@@ -1,0 +1,46 @@
+Static Methods , Static Fields :- 
+- static keyword can be applied not only to methods but also to variables of the class. 
+- Sometimes a method performs a task that does not depend on an object. We can execute the task without 
+instantiating the object of the class. 
+- Non-static methods are typically called instance methods.
+- static methods does not depend on the state of the object. Its independent and only depends on the arguments passed to it.
+- A static method can call other static methods of the same class directly and can manipulate static variables in the same
+class directly.
+- To access the class's instance variables and instance methods, a static method must use a reference to an object of the class.
+- To declare a method as static , place the keyword static before the return type in the methods declaration.
+- calling a static method : ClassName.methodName(arguments)
+Ex : MathClass methods 
+- class Math provides a collection of static methods that enable you to perform common mathematical calculations.
+- A static method is also called a class method. Similarly a static variable is also called a class variable.
+
+
+- Recall that each object of a class maintains its own copy of every instance variable of the class. 
+- There are variables for which each object of a class does not need its own seperate copy. Such variables are
+declared static and are also known as class variables.
+- When objects of a class containing static variables are created, all the objects of that class share one copy
+of those variables.
+- Together a class's static variables and instance variables are known as its fields.
+
+- public keyword allows you to use these fields in your own class.
+- A field declared with keyword final is constant - its value cannot change after the field is initialized.
+
+
+Why is method main declared as static ??
+- The JVM attempts to invoke the main method of the class you specify. At this point no objects of the class 
+have been created. 
+- Declaring main as static allows the JVM to invoke main without creating an instance of a class.
+
+
+3 methods to call a method
+a) Using a method name by itself to call another method of the same class. 
+b) Using a variable that contains a reference to an object followed by a dot (.) and the method name to call a 
+method of referenced object.
+c) Using the class name and the dot(.) to call a static method of a class.
+
+
+Scope of Declarations
+- Declarations introduce names that can be used to refer to such java entities.
+- The scope of a declaration is the portion of the program that can refer to the declared entity by its name.
+Such an entity is said to be "in scope" for that portion of the program.
+- if a local variable or parameter in a method has the same name as a field of the class , the field is hidden
+until the block in which the local variable was declared terminates. This is called Shadowing. !!
