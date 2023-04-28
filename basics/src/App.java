@@ -119,6 +119,11 @@ public class App {
         System.out.println("name:" + name);
         System.out.println("age:" + age);
         System.out.println("salary:" + salary);
+        //reading a character from the console
+        System.out.println("Enter a character:");
+        String s = input.nextLine();
+        char ch = s.charAt(0);
+        System.out.println("The character is" + ch);
         /*
             nextBoolean()	Reads a boolean value from the user
             nextByte()	Reads a byte value from the user
@@ -129,7 +134,6 @@ public class App {
             nextLong()	Reads a long value from the user
             nextShort()	Reads a short value from the user
         */
-        
     }
 
     public static void sum(int[] arr)
